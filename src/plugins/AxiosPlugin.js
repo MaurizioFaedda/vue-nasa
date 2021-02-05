@@ -5,6 +5,6 @@ const BASE_URL = "https://images-api.nasa.gov/search?q=";
 export default {
     install(Vue) {
         Vue.prototype.axios = axios;
-        Vue.prototype.axios = BASE_URL;
+        Vue.prototype.base_url = BASE_URL;
     }
 }

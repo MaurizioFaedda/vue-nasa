@@ -8,7 +8,7 @@
             <Card
               v-for="(media, index) in NasaMedia"
               :key="index"
-              :title="media[0].data.title"
+              :title="media.data[0].title"
               :image="media.links[0].href"
             />
           </div>
@@ -29,7 +29,7 @@ export default {
   },
   data() {
     return {
-      NasaMedia: {},
+      NasaMedia: [],
     };
   },
   methods: {
@@ -39,6 +39,7 @@ export default {
         .get(this.base_url + query + "&media_type=image")
         .then((response) => {
           self.NasaMedia = response.data.collection.items;
+          console.log(response.data.collection.items);
         });
     },
   },
