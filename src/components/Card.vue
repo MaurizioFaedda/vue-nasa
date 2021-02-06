@@ -1,6 +1,8 @@
 <template>
-  <div class="card" style="width: 18rem">
-    <img class="card-img-top" :src="image" alt="Card image cap" />
+  <div class="card w-25">
+    <div class="box-image">
+      <img class="" :src="image" alt="Card image cap" />
+    </div>
     <div class="card-body">
       <h5 class="card-title">
         {{ title }}
@@ -18,3 +20,19 @@ export default {
   props: ["title", "image"],
 };
 </script>
+
+<style lang="scss" scoped>
+.card {
+  width: calc(100% / 4);
+  height: 400px;
+  .box-image {
+    width: 100%;
+    height: 300px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+</style>

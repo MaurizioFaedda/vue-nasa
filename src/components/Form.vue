@@ -1,7 +1,7 @@
 <template>
   <form
     @submit.prevent="search"
-    class="form-inline d-flex justify-content-center"
+    class="form-inline d-flex justify-content-center my-5"
   >
     <input
       type="text"

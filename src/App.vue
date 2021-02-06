@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
+    <div class="logo-img mx-auto">
+      <img alt="Nasa logo" src="./assets/logo.png" />
+    </div>
     <Nasa />
   </div>
 </template>
@@ -25,5 +27,11 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  .logo-img {
+    width: 200px;
+    img {
+      width: 100%;
+    }
+  }
 }
 </style>

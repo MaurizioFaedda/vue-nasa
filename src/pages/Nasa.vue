@@ -4,7 +4,7 @@
       <div class="col-12">
         <div class="d-flex flex-wrap justify-content-center">
           <Form @newSearch="searchMedia" />
-          <div class="d-flex flex-wrap justify-content-center">
+          <div class="d-flex flex-wrap justify-content-around">
             <Card
               v-for="(media, index) in NasaMedia"
               :key="index"
