@@ -7,9 +7,6 @@
       <h5 class="card-title">
         {{ title }}
       </h5>
-      <p class="card-text">
-        <em></em>
-      </p>
     </div>
   </div>
 </template>
@@ -23,16 +20,28 @@ export default {
 
 <style lang="scss" scoped>
 .card {
-  width: calc(100% / 4);
+  width: calc(100% / 3);
   height: 400px;
+  margin: 30px;
+  border: none;
   .box-image {
     width: 100%;
     height: 300px;
+    transition: transform 0.2s;
+    border-radius: 4px;
+    &:hover {
+      transform: scale(1.4);
+      z-index: 1;
+    }
     img {
       width: 100%;
       height: 100%;
+      border-radius: 4px;
       object-fit: cover;
     }
+  }
+  .card-title {
+    font-family: "Courier New", Courier, monospace;
   }
 }
 </style>

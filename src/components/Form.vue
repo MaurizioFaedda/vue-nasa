@@ -4,17 +4,26 @@
     class="form-inline d-flex justify-content-center my-5"
   >
     <input
+      id="search-bar"
       type="text"
+      class="py-1"
       placeholder="search"
-      class="form-control"
-      v-model="query"
+      classList="form-control"
+      :value="query"
+      @input="query = $event.target.value"
     />
-    <input type="submit" value="search" class="btn btn-primary ml-2" />
+    <button type="submit" value="search" class="btn btn-primary py-1 ml-2">
+      <i class="fas fa-search"></i>
+    </button>
   </form>
 </template>
 <script>
+import Input from "./Input.vue";
 export default {
   name: "Form",
+  component: {
+    Input,
+  },
   data() {
     return {
       query: "",
@@ -27,3 +36,13 @@ export default {
   },
 };
 </script>
+<style lang="scss" scoped>
+#search-bar {
+  border-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  color: #0062cc;
+  &:focus {
+    outline: #0062cc auto 1px;
+  }
+}
+</style>
